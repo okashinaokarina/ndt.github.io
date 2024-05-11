@@ -168,6 +168,36 @@
         document.getElementsByClassName('leaflet-control-geocoder-icon')[0]
         .title += 'Search for a place';
         setBounds();
+            function osm(){
+var url = “https://tile.openstreetmap.org/{z}/{x}/{y}.png”;
+basemap(url);
+}
+function gmap(){
+var url = “https://mt1.google.com/vt/lyrs=r&x={x}&y={y}&z={z}”;
+basemap(url);
+}
+function chiriinmap(){
+var url = “https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png”;
+basemap(url);
+}
+
+function basemap(url){
+map.removeLayer(AAAA);
+
+layer__0 = L.tileLayer(url, {
+opacity: 1.0,
+attribution: ”,
+minZoom: 1,
+maxZoom: 28,
+minNativeZoom: 0,
+maxNativeZoom: 19
+});
+layer__0 ;
+map.addLayer(AAAA);
+
+}
+
+
         </script>
     </body>
 </html>
